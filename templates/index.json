@@ -227,7 +227,7 @@
         "padding-block-end": 72
       }
     },
-    "product_list_fa6P9H": {
+    "product_list_ninaPH": {
       "type": "product-list",
       "blocks": {
         "static-header": {
@@ -264,7 +264,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_list_text_YFtzcL": {
+            "product_list_text_cLchpE": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
@@ -272,9 +272,9 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
+                "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -290,13 +290,13 @@
               },
               "blocks": {}
             },
-            "product_list_button_MWeP9V": {
+            "product_list_button_N3VkRm": {
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
               "settings": {
                 "label": "View all",
                 "open_in_new_tab": false,
-                "style_class": "link",
+                "style_class": "button-unstyled",
                 "custom_button_background": "{{ settings.color_palette.foreground }}",
                 "custom_button_text": "{{ settings.color_palette.background }}",
                 "custom_button_border": "{{ settings.color_palette.background }}",
@@ -310,8 +310,8 @@
             }
           },
           "block_order": [
-            "product_list_text_YFtzcL",
-            "product_list_button_MWeP9V"
+            "product_list_text_cLchpE",
+            "product_list_button_N3VkRm"
           ]
         },
         "static-product-card": {
@@ -332,7 +332,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_card_gallery_677WP3": {
+            "product_card_gallery_V8F9GP": {
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
@@ -349,14 +349,14 @@
               },
               "blocks": {}
             },
-            "product_title_YXxMTj": {
+            "product_title_iJUqUn": {
               "type": "product-title",
               "name": "t:names.product_title",
               "settings": {
-                "width": "100%",
+                "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "paragraph",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -374,7 +374,7 @@
               },
               "blocks": {}
             },
-            "price_JQzVV4": {
+            "price_fM6MjH": {
               "type": "price",
               "name": "t:names.product_price",
               "settings": {
@@ -399,15 +399,15 @@
             }
           },
           "block_order": [
-            "product_card_gallery_677WP3",
-            "product_title_YXxMTj",
-            "price_JQzVV4"
+            "product_card_gallery_V8F9GP",
+            "product_title_iJUqUn",
+            "price_fM6MjH"
           ]
         }
       },
-      "name": "t:names.product_list",
+      "name": "t:names.products_grid",
       "settings": {
-        "collection": "all",
+        "collection": "",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 8,
@@ -421,7 +421,7 @@
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
-        "background_color": "{{ settings.color_palette.background }}",
+        "background_color": "",
         "padding-block-start": 48,
         "padding-block-end": 48
       }
@@ -430,6 +430,6 @@
   "order": [
     "slideshow_UECwFm",
     "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "product_list_ninaPH"
   ]
 }
