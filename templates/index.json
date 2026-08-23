@@ -227,7 +227,7 @@
         "padding-block-end": 72
       }
     },
-    "product_list_ninaPH": {
+    "product_list_EC4LnT": {
       "type": "product-list",
       "blocks": {
         "static-header": {
@@ -264,7 +264,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_list_text_cLchpE": {
+            "product_list_text_ekhM4N": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
@@ -290,7 +290,7 @@
               },
               "blocks": {}
             },
-            "product_list_button_N3VkRm": {
+            "product_list_button_EP7Mct": {
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
               "settings": {
@@ -310,8 +310,8 @@
             }
           },
           "block_order": [
-            "product_list_text_cLchpE",
-            "product_list_button_N3VkRm"
+            "product_list_text_ekhM4N",
+            "product_list_button_EP7Mct"
           ]
         },
         "static-product-card": {
@@ -332,7 +332,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_card_gallery_V8F9GP": {
+            "product_card_gallery_VUbKYA": {
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
@@ -349,7 +349,7 @@
               },
               "blocks": {}
             },
-            "product_title_iJUqUn": {
+            "product_title_e84eAN": {
               "type": "product-title",
               "name": "t:names.product_title",
               "settings": {
@@ -374,7 +374,7 @@
               },
               "blocks": {}
             },
-            "price_fM6MjH": {
+            "price_EdCqYX": {
               "type": "price",
               "name": "t:names.product_price",
               "settings": {
@@ -399,9 +399,9 @@
             }
           },
           "block_order": [
-            "product_card_gallery_V8F9GP",
-            "product_title_iJUqUn",
-            "price_fM6MjH"
+            "product_card_gallery_VUbKYA",
+            "product_title_e84eAN",
+            "price_EdCqYX"
           ]
         }
       },
@@ -425,11 +425,149 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "section_CrXjUQ": {
+      "type": "section",
+      "blocks": {
+        "text_4fcQ7t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made with care and unconditionally loved by our customers, this signature bestseller exceeds all expectations.</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "logo_VFcbN3": {
+          "type": "logo",
+          "settings": {
+            "inverse": false,
+            "font": "heading",
+            "text_color": "",
+            "unit": "percent",
+            "percent_width": 100,
+            "pixel_height": 48,
+            "custom_mobile_size": false,
+            "unit_mobile": "percent",
+            "percent_width_mobile": 100,
+            "pixel_height_mobile": 120,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_4fcQ7t",
+        "logo_VFcbN3"
+      ],
+      "name": "t:names.large_logo",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "space-between",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "medium",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "collection_links_phEBKr": {
+      "type": "collection-links",
+      "blocks": {
+        "link": {
+          "type": "_collection-link",
+          "static": true,
+          "settings": {
+            "show_count": true
+          },
+          "blocks": {
+            "title": {
+              "type": "_inline-collection-title",
+              "name": "t:names.title",
+              "static": true,
+              "settings": {
+                "font": "var(--font-subheading--family)",
+                "weight": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none"
+              },
+              "blocks": {}
+            },
+            "image": {
+              "type": "_image",
+              "static": true,
+              "settings": {
+                "height": "medium",
+                "ratio": "portrait",
+                "border_radius": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "name": "t:names.collection_links_text",
+      "settings": {
+        "collection_list": [
+          "hats",
+          "shirts",
+          "accessories"
+        ],
+        "layout": "text",
+        "section_width": "page-width",
+        "alignment": "center",
+        "image_position": "right",
+        "background_color": "",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
     }
   },
   "order": [
     "slideshow_UECwFm",
     "hero_jVaWmY",
-    "product_list_ninaPH"
+    "product_list_EC4LnT",
+    "section_CrXjUQ",
+    "collection_links_phEBKr"
   ]
 }
