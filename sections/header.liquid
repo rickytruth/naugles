@@ -462,6 +462,15 @@
       {{ navigation_bar }}
     </div>
   {% endif %}
+
+  <div
+    class="header__brand-stripe"
+    aria-hidden="true"
+  >
+    <span class="header__brand-stripe-band header__brand-stripe-band--orange"></span>
+    <span class="header__brand-stripe-band header__brand-stripe-band--yellow"></span>
+    <span class="header__brand-stripe-band header__brand-stripe-band--brown"></span>
+  </div>
 </header-component>
 
 <script
@@ -741,6 +750,32 @@
       /* Only elevate the row when the submenu is open to avoid overlapping other elevated content */
       z-index: var(--layer-heightened);
     }
+  }
+
+  .header__brand-stripe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .header__brand-stripe-band {
+    display: block;
+    flex: 1 1 0;
+    width: 100%;
+  }
+
+  .header__brand-stripe-band--orange {
+    background-color: #e97226;
+  }
+
+  .header__brand-stripe-band--yellow {
+    background-color: #fbc327;
+  }
+
+  .header__brand-stripe-band--brown {
+    background-color: #51271e;
   }
 
   .header__row--top:not(.divider--page-width),
