@@ -36,13 +36,15 @@
   {% content_for 'block', type: '_inline-collection-title', id: 'title', suffix: count %}
 {% endcapture %}
 
-{% capture image_block %}
-  {%- liquid
-    assign placeholder_variant = index | modulo: 4 | plus: 1
-    assign placeholder_name = 'collection-apparel-' | append: placeholder_variant
-  -%}
-  {% content_for 'block', type: '_image', id: 'image', loading: loading, placeholder: placeholder_name, decorative_image: true %}
-{% endcapture %}
+{% if image_only %}
+  {% capture image_block %}
+    {%- liquid
+      assign placeholder_variant = index | modulo: 4 | plus: 1
+      assign placeholder_name = 'collection-apparel-' | append: placeholder_variant
+    -%}
+    {% content_for 'block', type: '_image', id: 'image', loading: loading, placeholder: placeholder_name, decorative_image: true %}
+  {% endcapture %}
+{% endif %}
 
 {% if image_only %}
   <a
@@ -62,11 +64,9 @@
     href="{{ closest.collection.url }}"
     class="collection-links__link"
     ref="links[]"
-    on:pointerenter="/select/{{ index }}"
-    on:focus="/select/{{ index }}"
-    {% if section.settings.layout == 'text' %}
-      on:pointerleave="/clearSelections"
-      on:blur="/clearSelections"
+    {% if section.settings.layout == 'spotlight' %}
+      on:pointerenter="/select/{{ index }}"
+      on:focus="/select/{{ index }}"
     {% endif %}
     aria-current="{{ current }}"
     {% if onboarding %}
@@ -75,16 +75,6 @@
     {{ block.shopify_attributes }}
   >
     {{ title_block }}
-
-    {% if section.settings.layout == 'text' %}
-      <div
-        class="collection-links__image"
-        ref="images[]"
-        hidden
-      >
-        {{ image_block }}
-      </div>
-    {% endif %}
   </a>
 {% endif %}
 
@@ -92,23 +82,13 @@
   .collection-links__link {
     --min-font-size: var(--font-size--4xl);
     --max-font-size: var(--font-size--6xl);
+    --color: #51271e;
 
     display: flex;
-    color: inherit;
+    color: #51271e;
     text-decoration: none;
     text-wrap: pretty;
     font-size: clamp(var(--min-font-size), 4.5vw, var(--max-font-size));
-
-    /* When hovering over container, dim non-current links (text layout only) */
-    @media (hover: hover) {
-      collection-links-component:not([layout='spotlight']) .collection-links__container:hover & {
-        opacity: var(--opacity-subdued-text);
-      }
-
-      collection-links-component:not([layout='spotlight']) .collection-links__container:hover &[aria-current='true'] {
-        opacity: 1;
-      }
-    }
 
     [layout='spotlight'] & {
       /* Spotlight layout: dimmed by default */
@@ -121,6 +101,7 @@
 
     .text-block {
       display: inline-block;
+      color: #51271e;
     }
 
     @media screen and (max-width: 749px) {
@@ -152,25 +133,6 @@
     &:not([hidden]) {
       display: flex;
     }
-
-    &[reveal] {
-      --offset: 15px;
-
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: var(--layer-temporary);
-      display: block;
-      translate: calc(var(--x) + var(--offset)) calc(var(--y) + var(--offset));
-      pointer-events: none;
-      width: auto;
-
-      image-block {
-        --image-height-basis: 5rem;
-
-        height: var(--image-height);
-      }
-    }
   }
 {% endstylesheet %}
 
@@ -187,7 +149,7 @@
       "type": "checkbox",
       "id": "show_count",
       "label": "t:settings.show_count",
-      "default": true
+      "default": false
     }
   ]
 }
