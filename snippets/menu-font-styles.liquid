@@ -20,4 +20,8 @@
   --menu-top-level-font-size: var(--menu-font-sm--size); --menu-top-level-font-line-height:
   var(--menu-font-sm--line-height);
 {% endif %}
---menu-top-level-font-color: var(--color-foreground); --menu-top-level-font-color-rgb: var(--color-foreground-rgb);
+{% if settings.text_color != blank %}
+  --menu-top-level-font-color: {{ settings.text_color }}; --menu-top-level-font-color-rgb: {{ settings.text_color.rgb }};
+{% else %}
+  --menu-top-level-font-color: var(--color-foreground); --menu-top-level-font-color-rgb: var(--color-foreground-rgb);
+{% endif %}
