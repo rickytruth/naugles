@@ -287,7 +287,9 @@
     },
     "hero_jVaWmY": {
       "type": "hero",
-      "custom_css": [],
+      "custom_css": [
+        ".hero__media {object-fit: contain; object-position: center; padding: 5%; box-sizing: border-box;}"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
